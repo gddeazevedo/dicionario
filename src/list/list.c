@@ -8,7 +8,7 @@ List* newList() {
     return list;
 }
 
-ListNode* search_in(List* list, char* word) {
+static ListNode* search_in(List* list, char* word) {
     strcpy(list->head->word, word);
     ListNode* current = list->head->next;
 
@@ -17,6 +17,17 @@ ListNode* search_in(List* list, char* word) {
     }
 
     return current;
+}
+
+bool is_word_in(List* list, char* word) {
+    strcpy(list->head->word, word);
+    ListNode* current = list->head->next;
+
+    while (strcmp(current->word, word) != 0) {
+        current = current->next;
+    }
+
+    return current != list->head;
 }
 
 void insert_in(List* list, char* word) {

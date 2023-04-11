@@ -12,4 +12,10 @@ void main() {
     remove_from(list, "carteira");
     remove_from(list, "amarula");
     print_list(list);
+
+    if (is_word_in(list, "anel")) {
+        printf("Ta\n");
+    } else {
+        printf("Ta nao\n");
+    }
 }
