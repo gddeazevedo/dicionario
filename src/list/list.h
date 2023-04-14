@@ -16,14 +16,11 @@ typedef struct __linked {
 	ListNode* head;
 } List;
 
-
 List* newList();
-static ListNode* search_in(List* list, char* word);
+ListNode* search_in(List* list, char* word);
 bool is_word_in(List* list, char* word);
 void insert_in(List* list, char* word);
 void remove_from(List* list, char* word);
 void print_list(List* list);
-
-
 
 #endif
