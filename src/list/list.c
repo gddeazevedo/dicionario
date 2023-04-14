@@ -8,7 +8,7 @@ List* newList() {
     return list;
 }
 
-static ListNode* search_in(List* list, char* word) {
+ListNode* search_in(List* list, char* word) {
     strcpy(list->head->word, word);
     ListNode* current = list->head->next;
 
