@@ -38,14 +38,6 @@ Node* tree_minimum(Node* root) {
   return root;
 }
 
-Node* tree_maximum(Node* root) {
-  while (root->right != NULL) {
-    root = root->right;
-  }
-
-  return root;
-}
-
 Node* tree_successor(Node* node) {
   if (node->right != NULL) {
     return tree_minimum(node->right);
