@@ -17,10 +17,9 @@ typedef struct __linked {
 } List;
 
 List* newList();
-ListNode* search_in(List* list, char* word);
-bool is_word_in(List* list, char* word);
-void insert_in(List* list, char* word);
-void remove_from(List* list, char* word);
-void print_list(List* list);
+ListNode* list_search(List* list, char* word);
+void list_insert(List* list, char* word);
+void list_remove(List* list, char* word);
+void list_print(List* list);
 
 #endif

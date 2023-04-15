@@ -8,7 +8,7 @@ List* newList() {
     return list;
 }
 
-ListNode* search_in(List* list, char* word) {
+ListNode* list_search(List* list, char* word) {
     strcpy(list->head->word, word);
     ListNode* current = list->head->next;
 
@@ -19,19 +19,8 @@ ListNode* search_in(List* list, char* word) {
     return current;
 }
 
-bool is_word_in(List* list, char* word) {
-    strcpy(list->head->word, word);
-    ListNode* current = list->head->next;
-
-    while (strcmp(current->word, word) != 0) {
-        current = current->next;
-    }
-
-    return current != list->head;
-}
-
-void insert_in(List* list, char* word) {
-    ListNode* current = search_in(list, word);
+void list_insert(List* list, char* word) {
+    ListNode* current = list_search(list, word);
     bool word_not_found = (
         current == list->head || strcmp(current->word, word) != 0);
 
@@ -45,8 +34,8 @@ void insert_in(List* list, char* word) {
     }
 }
 
-void remove_from(List* list, char* word) {
-    ListNode* current = search_in(list, word);
+void list_remove(List* list, char* word) {
+    ListNode* current = list_search(list, word);
     bool word_found = (
         current != list->head && strcmp(current->word, word) == 0);
 
@@ -57,7 +46,7 @@ void remove_from(List* list, char* word) {
     }
 }
 
-void print_list(List* list) {
+void list_print(List* list) {
     ListNode* current = list->head->next;
 
     printf("[ ");
