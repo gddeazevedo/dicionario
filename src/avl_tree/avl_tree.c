@@ -108,4 +108,6 @@ void tree_remove(Tree* tree, char key) {
     y->left = z->left;
     y->left->parent = y;
   }
+
+  free(z);
 }
