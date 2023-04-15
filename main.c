@@ -11,8 +11,6 @@ void main() {
   tree_insert(t, 'o');
   tree_insert(t, 'n');
   tree_remove(t, 'g');
-  tree_remove(t, 'b');
-  tree_remove(t, 'm');
 
   tree_preorder_walk(t->root);
 }

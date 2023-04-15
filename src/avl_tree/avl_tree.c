@@ -96,7 +96,7 @@ void tree_remove(Tree* tree, char key) {
   } else if (z->right == NULL) {
     transplant(tree, z, z->left);
   } else {
-    Node* y = tree_successor(z); // successor
+    Node* y = tree_successor(z);
 
     if (y->parent != z) {
       transplant(tree, y, y->right);
