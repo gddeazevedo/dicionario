@@ -49,12 +49,16 @@ Node* tree_successor(Node* node) {
     node = aux;
     aux = aux->parent;
   }
+
+  return aux;
 }
 
 void tree_insert(Tree* tree, char key) {
   Node* y = NULL;
   Node* x = tree->root;
   Node* z = newNode(key);
+
+  if (tree_search(tree->root, key) != NULL) return;
 
   while (x != NULL) {
     y = x;
@@ -110,4 +114,48 @@ void tree_remove(Tree* tree, char key) {
   }
 
   free(z);
+}
+
+void right_rotate(Tree* tree, Node* node) {
+  Node* aux = node->left;
+  node->left = aux->right;
+
+  if (aux->right != NULL) {
+    aux->right->parent = node;
+  }
+
+  aux->parent = node->parent;
+
+  if (node->parent == NULL) {
+    tree->root = aux;
+  } else if (node == node->parent->left) {
+    node->parent->left = aux;
+  } else {
+    node->parent->right = aux;
+  }
+
+  aux->right = node;
+  node->parent = aux;
+}
+
+void left_rotate(Tree* tree, Node* node) {
+  Node* aux = node->right;
+  node->right = aux->left;
+
+  if (aux->left != NULL) {
+    aux->left->parent = node;
+  }
+
+  aux->parent = node->parent;
+
+  if (node->parent == NULL) {
+    tree->root = aux;
+  } else if (node == node->parent->left) {
+    node->parent->left = aux;
+  } else {
+    node->parent->right = aux;
+  }
+
+  aux->left = node;
+  node->parent = aux;
 }
