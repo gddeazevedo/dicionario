@@ -5,31 +5,30 @@
 #include <stdio.h>
 #include "../list/list.h"
 
-typedef struct __node {
+typedef struct __avl_node {
   char key;
-  short bf; // balance factor
-  struct __node* parent;
-  struct __node* left;
-  struct __node* right;
-} Node;
+  int height;
+  struct __avl_node* parent;
+  struct __avl_node* left;
+  struct __avl_node* right;
+} AVLNode;
 
-typedef struct __tree {
-  Node* root;
-} Tree;
+typedef struct __avl_tree {
+  AVLNode* root;
+} AVLTree;
 
-Tree* newTree();
-Node* newNode(char key);
+AVLTree* newAVLTree();
+AVLNode* newAVLNode(char key);
+AVLNode* tree_search(AVLNode* root, char key);
+AVLNode* tree_minimum(AVLNode* root);
+AVLNode* tree_successor(AVLNode* node);
 
-void  tree_preorder_walk(Node* root);
-Node* tree_search(Node* root, char key);
-Node* tree_minimum(Node* root);
-Node* tree_successor(Node* node);
-void  tree_insert(Tree* tree, char key);
-void  transplant(Tree* tree, Node* u, Node* v);
-void  tree_remove(Tree* tree, char key);
-
-
-void right_rotate(Tree* tree, Node* node);
-void left_rotate(Tree* tree, Node* node);
+void tree_preorder_walk(AVLNode* root);
+void tree_inorder_walk(AVLNode* root);
+void tree_insert(AVLTree* tree, char key);
+void transplant(AVLTree* tree, AVLNode* u, AVLNode* v);
+void tree_remove(AVLTree* tree, char key);
+void right_rotate(AVLTree* tree, AVLNode* node);
+void left_rotate(AVLTree* tree, AVLNode* node);
 
 #endif

@@ -9,7 +9,7 @@ void main() {
   // list_insert(l, "peixe");
   // list_remove(l, "banana");
 
-  Tree* t = newTree();
+  AVLTree* t = newAVLTree();
   tree_insert(t, 'g');
   tree_insert(t, 'b');
   tree_insert(t, 'm');
@@ -22,9 +22,11 @@ void main() {
   right_rotate(t, tree_search(t->root, 'o'));
   left_rotate(t, t->root);
   left_rotate(t, t->root);
-
+  left_rotate(t, t->root);
 
   tree_preorder_walk(t->root);
+  printf("\n");
+  tree_inorder_walk(t->root);
   printf("\nRoot: %c\n", t->root->key);
   // list_print(l);
 }

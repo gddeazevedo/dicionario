@@ -1,13 +1,13 @@
 #include "avl_tree.h"
 
-Tree* newTree() {
-  Tree* tree = (Tree*) malloc(sizeof(Tree));
+AVLTree* newAVLTree() {
+  AVLTree* tree = (AVLTree*) malloc(sizeof(AVLTree));
   tree->root = NULL;
   return tree;
 }
 
-Node* newNode(char key) {
-  Node* node = (Node*) malloc(sizeof(Node));
+AVLNode* newAVLNode(char key) {
+  AVLNode* node = (AVLNode*) malloc(sizeof(AVLNode));
   node->parent = NULL;
   node->left   = NULL;
   node->right  = NULL;
@@ -15,14 +15,7 @@ Node* newNode(char key) {
   return node;
 }
 
-void tree_preorder_walk(Node* root) {
-    if (root == NULL) return;
-    printf("%c ", root->key);
-    tree_preorder_walk(root->left);
-    tree_preorder_walk(root->right);
-}
-
-Node* tree_search(Node* root, char key) {
+AVLNode* tree_search(AVLNode* root, char key) {
     while (root != NULL && key != root->key) {
         root = (key < root->key) ? root->left : root->right;
     }
@@ -30,7 +23,7 @@ Node* tree_search(Node* root, char key) {
     return root;
 }
 
-Node* tree_minimum(Node* root) {
+AVLNode* tree_minimum(AVLNode* root) {
   while (root->left != NULL) {
     root = root->left;
   }
@@ -38,12 +31,12 @@ Node* tree_minimum(Node* root) {
   return root;
 }
 
-Node* tree_successor(Node* node) {
+AVLNode* tree_successor(AVLNode* node) {
   if (node->right != NULL) {
     return tree_minimum(node->right);
   }
 
-  Node* aux = node->parent;
+  AVLNode* aux = node->parent;
 
   while (aux != NULL && node == aux->right) {
     node = aux;
@@ -53,10 +46,24 @@ Node* tree_successor(Node* node) {
   return aux;
 }
 
-void tree_insert(Tree* tree, char key) {
-  Node* y = NULL;
-  Node* x = tree->root;
-  Node* z = newNode(key);
+void tree_preorder_walk(AVLNode* root) {
+  if (root == NULL) return;
+  printf("%c ", root->key);
+  tree_preorder_walk(root->left);
+  tree_preorder_walk(root->right);
+}
+
+void tree_inorder_walk(AVLNode* root) {
+  if (root == NULL) return;
+  tree_inorder_walk(root->left);
+  printf("%c ", root->key);
+  tree_inorder_walk(root->right);
+}
+
+void tree_insert(AVLTree* tree, char key) {
+  AVLNode* y = NULL;
+  AVLNode* x = tree->root;
+  AVLNode* z = newAVLNode(key);
 
   if (tree_search(tree->root, key) != NULL) return;
 
@@ -76,7 +83,7 @@ void tree_insert(Tree* tree, char key) {
   }
 }
 
-void transplant(Tree* tree, Node* u, Node* v) {
+void transplant(AVLTree* tree, AVLNode* u, AVLNode* v) {
   if (u->parent == NULL) {
     tree->root = v;
   } else if (u == u->parent->left) {
@@ -90,8 +97,8 @@ void transplant(Tree* tree, Node* u, Node* v) {
   }
 }
 
-void tree_remove(Tree* tree, char key) {
-  Node* z = tree_search(tree->root, key);
+void tree_remove(AVLTree* tree, char key) {
+  AVLNode* z = tree_search(tree->root, key);
 
   if (z == NULL) return;
 
@@ -100,7 +107,7 @@ void tree_remove(Tree* tree, char key) {
   } else if (z->right == NULL) {
     transplant(tree, z, z->left);
   } else {
-    Node* y = tree_successor(z);
+    AVLNode* y = tree_successor(z);
 
     if (y->parent != z) {
       transplant(tree, y, y->right);
@@ -116,8 +123,8 @@ void tree_remove(Tree* tree, char key) {
   free(z);
 }
 
-void right_rotate(Tree* tree, Node* node) {
-  Node* aux = node->left;
+void right_rotate(AVLTree* tree, AVLNode* node) {
+  AVLNode* aux = node->left;
   node->left = aux->right;
 
   if (aux->right != NULL) {
@@ -138,8 +145,8 @@ void right_rotate(Tree* tree, Node* node) {
   node->parent = aux;
 }
 
-void left_rotate(Tree* tree, Node* node) {
-  Node* aux = node->right;
+void left_rotate(AVLTree* tree, AVLNode* node) {
+  AVLNode* aux = node->right;
   node->right = aux->left;
 
   if (aux->left != NULL) {
