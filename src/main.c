@@ -1,32 +1,18 @@
 #include "./avl_tree/avl_tree.h"
 
 void main() {
-  // List* l = newList();
-  //
-  // list_insert(l, "zaratustra");
-  // list_insert(l, "banana");
-  // list_insert(l, "abacate");
-  // list_insert(l, "peixe");
-  // list_remove(l, "banana");
-
   AVLTree* t = newAVLTree();
-  tree_insert(t, 'g');
-  tree_insert(t, 'b');
-  tree_insert(t, 'm');
-  tree_insert(t, 'a');
-  tree_insert(t, 'c');
-  tree_insert(t, 'j');
   tree_insert(t, 'o');
-  tree_insert(t, 'n');
+  tree_insert(t, 'g');
+  tree_insert(t, 'v');
+  tree_insert(t, 'c');
+  tree_insert(t, 'e');
+  tree_insert(t, 'b');
+  tree_insert(t, 'a');
 
-  right_rotate(t, tree_search(t->root, 'o'));
-  left_rotate(t, t->root);
-  left_rotate(t, t->root);
-  left_rotate(t, t->root);
-
+  printf("Preorder: ");
   tree_preorder_walk(t->root);
-  printf("\n");
+  printf("\nIn Order: ");
   tree_inorder_walk(t->root);
-  printf("\nRoot: %c\n", t->root->key);
-  // list_print(l);
+  printf("\nRoot: %c\nRoot height: %d\n", t->root->key, t->root->height);
 }

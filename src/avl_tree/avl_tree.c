@@ -12,6 +12,8 @@ AVLNode* newAVLNode(char key) {
   node->left   = NULL;
   node->right  = NULL;
   node->key = key;
+  node->height = 1;
+  node->bf = 0;
   return node;
 }
 
@@ -48,7 +50,7 @@ AVLNode* tree_successor(AVLNode* node) {
 
 void tree_preorder_walk(AVLNode* root) {
   if (root == NULL) return;
-  printf("%c ", root->key);
+  printf("[%c, %d] ", root->key, root->bf);
   tree_preorder_walk(root->left);
   tree_preorder_walk(root->right);
 }
@@ -81,6 +83,9 @@ void tree_insert(AVLTree* tree, char key) {
   } else {
     y->right = z;
   }
+
+  update_heights_and_bf(z->parent);
+  balance(tree, z->parent);
 }
 
 void transplant(AVLTree* tree, AVLNode* u, AVLNode* v) {
@@ -143,6 +148,8 @@ void right_rotate(AVLTree* tree, AVLNode* node) {
 
   aux->right = node;
   node->parent = aux;
+
+  update_heights_and_bf(node);
 }
 
 void left_rotate(AVLTree* tree, AVLNode* node) {
@@ -165,4 +172,44 @@ void left_rotate(AVLTree* tree, AVLNode* node) {
 
   aux->left = node;
   node->parent = aux;
+
+  update_heights_and_bf(node);
+}
+
+void update_heights_and_bf(AVLNode* node) {
+  while (node != NULL) {
+    int lh = get_avlnode_height(node->left);
+    int rh = get_avlnode_height(node->right);
+    node->height = 1 + max(lh, rh);
+    node->bf = rh - lh;
+    node = node->parent;
+  }
+}
+
+void balance(AVLTree* tree, AVLNode* node) {
+  while (node != NULL) {
+    if (node->bf == -2) {
+      if (node->left != NULL && node->left->bf > 0) {
+        left_rotate(tree, node->left);
+      }
+      right_rotate(tree, node);
+    } else if (node->bf == 2) {
+      if (node->right != NULL && node->right->bf < 0) {
+        right_rotate(tree, node->right);
+      }
+      left_rotate(tree, node);
+    }
+
+    node = node->parent;
+  }
+}
+
+int max(int x, int y) {
+  if (x > y) return x;
+  return y;
+}
+
+int get_avlnode_height(AVLNode* node) {
+  if (node == NULL) return 0;
+  return node->height;
 }

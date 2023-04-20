@@ -8,6 +8,7 @@
 typedef struct __avl_node {
   char key;
   int height;
+  int bf; // balance factor
   struct __avl_node* parent;
   struct __avl_node* left;
   struct __avl_node* right;
@@ -30,5 +31,10 @@ void transplant(AVLTree* tree, AVLNode* u, AVLNode* v);
 void tree_remove(AVLTree* tree, char key);
 void right_rotate(AVLTree* tree, AVLNode* node);
 void left_rotate(AVLTree* tree, AVLNode* node);
+void update_heights_and_bf(AVLNode* node);
+void balance(AVLTree* tree, AVLNode* node);
+
+int max(int x, int y);
+int get_avlnode_height(AVLNode* node);
 
 #endif
