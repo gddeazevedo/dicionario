@@ -63,11 +63,12 @@ void tree_inorder_walk(AVLNode* root) {
 }
 
 void tree_insert(AVLTree* tree, char key) {
+  if (tree_search(tree->root, key) != NULL) return;
+
   AVLNode* y = NULL;
   AVLNode* x = tree->root;
   AVLNode* z = newAVLNode(key);
 
-  if (tree_search(tree->root, key) != NULL) return;
 
   while (x != NULL) {
     y = x;
@@ -84,8 +85,12 @@ void tree_insert(AVLTree* tree, char key) {
     y->right = z;
   }
 
-  update_heights_and_bf(z->parent);
-  balance(tree, z->parent);
+  AVLNode* aux = z->parent;
+  while (aux != NULL) {
+    update_heights_and_bf(aux);
+    balance(tree, aux);
+    aux = aux->parent;
+  }
 }
 
 void transplant(AVLTree* tree, AVLNode* u, AVLNode* v) {
@@ -125,6 +130,8 @@ void tree_remove(AVLTree* tree, char key) {
     y->left->parent = y;
   }
 
+  z->left  = NULL;
+  z->right = NULL;
   free(z);
 }
 
@@ -177,30 +184,23 @@ void left_rotate(AVLTree* tree, AVLNode* node) {
 }
 
 void update_heights_and_bf(AVLNode* node) {
-  while (node != NULL) {
-    int lh = get_avlnode_height(node->left);
-    int rh = get_avlnode_height(node->right);
-    node->height = 1 + max(lh, rh);
-    node->bf = rh - lh;
-    node = node->parent;
-  }
+  int lh = get_avlnode_height(node->left);
+  int rh = get_avlnode_height(node->right);
+  node->height = 1 + max(lh, rh);
+  node->bf = rh - lh;
 }
 
 void balance(AVLTree* tree, AVLNode* node) {
-  while (node != NULL) {
-    if (node->bf == -2) {
-      if (node->left != NULL && node->left->bf > 0) {
-        left_rotate(tree, node->left);
-      }
-      right_rotate(tree, node);
-    } else if (node->bf == 2) {
-      if (node->right != NULL && node->right->bf < 0) {
-        right_rotate(tree, node->right);
-      }
-      left_rotate(tree, node);
+  if (node->bf == -2) {
+    if (node->left != NULL && node->left->bf > 0) {
+      left_rotate(tree, node->left);
     }
-
-    node = node->parent;
+    right_rotate(tree, node);
+  } else if (node->bf == 2) {
+    if (node->right != NULL && node->right->bf < 0) {
+      right_rotate(tree, node->right);
+    }
+    left_rotate(tree, node);
   }
 }
 

@@ -9,6 +9,8 @@ void main() {
   tree_insert(t, 'e');
   tree_insert(t, 'b');
   tree_insert(t, 'a');
+  tree_insert(t, 'h');
+
 
   printf("Preorder: ");
   tree_preorder_walk(t->root);
