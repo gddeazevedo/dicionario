@@ -69,7 +69,6 @@ void tree_insert(AVLTree* tree, char key) {
   AVLNode* x = tree->root;
   AVLNode* z = newAVLNode(key);
 
-
   while (x != NULL) {
     y = x;
     x = (z->key < x->key) ? x->left : x->right;
@@ -114,8 +113,10 @@ void tree_remove(AVLTree* tree, char key) {
 
   if (z->left == NULL) {
     transplant(tree, z, z->right);
+    remove_fixup(tree, z->parent);
   } else if (z->right == NULL) {
     transplant(tree, z, z->left);
+    remove_fixup(tree, z->parent);
   } else {
     AVLNode* y = tree_successor(z);
 
@@ -201,6 +202,14 @@ void balance(AVLTree* tree, AVLNode* node) {
       right_rotate(tree, node->right);
     }
     left_rotate(tree, node);
+  }
+}
+
+void remove_fixup(AVLTree* tree, AVLNode* node) {
+  while (node != NULL) {
+    update_heights_and_bf(node);
+    balance(tree, node);
+    node = node->parent;
   }
 }
 
