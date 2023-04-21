@@ -10,6 +10,9 @@ void main() {
   tree_insert(t, 'b');
   tree_insert(t, 'a');
   tree_insert(t, 'h');
+  tree_insert(t, 'f');
+  tree_insert(t, 'z');
+  tree_insert(t, 'u');
 
 
   printf("Preorder: ");

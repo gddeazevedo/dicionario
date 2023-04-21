@@ -12,7 +12,7 @@ AVLNode* newAVLNode(char key) {
   node->left   = NULL;
   node->right  = NULL;
   node->key = key;
-  node->height = 1;
+  node->height = 0;
   node->bf = 0;
   return node;
 }
@@ -210,6 +210,6 @@ int max(int x, int y) {
 }
 
 int get_avlnode_height(AVLNode* node) {
-  if (node == NULL) return 0;
+  if (node == NULL) return -1;
   return node->height;
 }
