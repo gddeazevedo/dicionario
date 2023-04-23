@@ -33,7 +33,7 @@ void right_rotate(AVLTree* tree, AVLNode* node);
 void left_rotate(AVLTree* tree, AVLNode* node);
 void update_heights_and_bf(AVLNode* node);
 void balance(AVLTree* tree, AVLNode* node);
-void remove_fixup(AVLTree* tree, AVLNode* node);
+void fixup(AVLTree* tree, AVLNode* node);
 
 int max(int x, int y);
 int get_avlnode_height(AVLNode* node);

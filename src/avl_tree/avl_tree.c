@@ -50,7 +50,10 @@ AVLNode* tree_successor(AVLNode* node) {
 
 void tree_preorder_walk(AVLNode* root) {
   if (root == NULL) return;
-  printf("[%c, %d] ", root->key, root->bf);
+  if (root->parent != NULL)
+    printf("[%c, %c, %d] ", root->key, root->parent->key, root->bf);
+  else
+    printf("[%c, %d] ", root->key, root->bf);
   tree_preorder_walk(root->left);
   tree_preorder_walk(root->right);
 }
@@ -84,12 +87,7 @@ void tree_insert(AVLTree* tree, char key) {
     y->right = z;
   }
 
-  AVLNode* aux = z->parent;
-  while (aux != NULL) {
-    update_heights_and_bf(aux);
-    balance(tree, aux);
-    aux = aux->parent;
-  }
+  fixup(tree, z->parent);
 }
 
 void transplant(AVLTree* tree, AVLNode* u, AVLNode* v) {
@@ -113,10 +111,10 @@ void tree_remove(AVLTree* tree, char key) {
 
   if (z->left == NULL) {
     transplant(tree, z, z->right);
-    remove_fixup(tree, z->parent);
+    fixup(tree, z->parent);
   } else if (z->right == NULL) {
     transplant(tree, z, z->left);
-    remove_fixup(tree, z->parent);
+    fixup(tree, z->parent);
   } else {
     AVLNode* y = tree_successor(z);
 
@@ -205,7 +203,7 @@ void balance(AVLTree* tree, AVLNode* node) {
   }
 }
 
-void remove_fixup(AVLTree* tree, AVLNode* node) {
+void fixup(AVLTree* tree, AVLNode* node) {
   while (node != NULL) {
     update_heights_and_bf(node);
     balance(tree, node);

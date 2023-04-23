@@ -13,8 +13,10 @@ void main() {
   tree_insert(t, 'u');
   tree_insert(t, 'z');
   tree_insert(t, 'f');
+  tree_insert(t, 'm');
+  tree_insert(t, 'n');
 
-  tree_remove(t, 'b');
+  tree_remove(t, 'c');
   // tree_remove(t, 'g');
 
 
