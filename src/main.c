@@ -1,31 +1,29 @@
-#include "./avl_tree/avl_tree.h"
+#include "./dictionary/dictionary.h"
 
 void main() {
-  AVLTree* t = newAVLTree();
-  tree_insert(t, 'o');
-  tree_insert(t, 'g');
-  tree_insert(t, 'v');
-  tree_insert(t, 'c');
-  tree_insert(t, 'e');
-  tree_insert(t, 'b');
-  tree_insert(t, 'a');
-  tree_insert(t, 'h');
-  tree_insert(t, 'u');
-  tree_insert(t, 'z');
-  tree_insert(t, 'f');
-  tree_insert(t, 'm');
-  tree_insert(t, 'n');
 
-  tree_remove(t, 'f');
-  tree_remove(t, 'e');
-  tree_remove(t, 'b');
-  // tree_remove(t, 'o');
-  // tree_remove(t, 'g');
+  Dict* dict = newDict();
+  insert_word(dict, "banana"); // b
+  insert_word(dict, "ameixa"); // a
+  insert_word(dict, "pamonha"); // p
+  insert_word(dict, "alecrim");
+  insert_word(dict, "zumba"); // z
+  insert_word(dict, "bala");
+  insert_word(dict, "aladin");
+  insert_word(dict, "pasta");
+  insert_word(dict, "vestido"); // v
+  insert_word(dict, "canivete"); // c
+  insert_word(dict, "helicoptero"); // h
+  insert_word(dict, "material");
+  insert_word(dict, "utopia");
+  insert_word(dict, "will");
+  insert_word(dict, "xerox");
+  insert_word(dict, "yellow");
 
 
   printf("Preorder: ");
-  tree_preorder_walk(t->root);
-  printf("\nIn Order: ");
-  tree_inorder_walk(t->root);
-  printf("\nRoot: %c\nRoot height: %d\n", t->root->key, t->root->height);
+  tree_preorder_walk(dict->tree->root);
+  printf("\n----In Order----\n");
+  tree_inorder_walk(dict->tree->root);
+  printf("\nRoot: %c\nRoot height: %d\n", dict->tree->root->key, dict->tree->root->height);
 }
