@@ -5,6 +5,7 @@ List* newList() {
     list->head = (ListNode*) malloc(sizeof(ListNode));
     list->head->prev = list->head;
     list->head->next = list->head;
+    list->size = 0;
     return list;
 }
 
@@ -31,6 +32,7 @@ void list_insert(List* list, char* word) {
         new_node->prev = current->prev;
         current->prev->next = new_node;
         current->prev = new_node;
+        list->size += 1;
     }
 }
 
@@ -43,6 +45,7 @@ void list_remove(List* list, char* word) {
         current->prev->next = current->next;
         current->next->prev = current->prev;
         free(current);
+        list->size -= 1;
     }
 }
 

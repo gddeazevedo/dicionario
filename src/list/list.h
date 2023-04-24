@@ -14,6 +14,7 @@ typedef struct __list_node {
 
 typedef struct __linked {
 	ListNode* head;
+	unsigned int size;
 } List;
 
 List* newList();
