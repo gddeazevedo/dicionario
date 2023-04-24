@@ -28,6 +28,9 @@ void main() {
   insert_word(dict, "danone");
   insert_word(dict, "elefante");
   insert_word(dict, "faca");
+  insert_word(dict, "fazer");
+  insert_word(dict, "folha");
+  insert_word(dict, "lapis");
 
   printf("----Preorder----\n");
   tree_preorder_walk(dict->tree->root);
