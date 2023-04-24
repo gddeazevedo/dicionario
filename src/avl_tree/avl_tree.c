@@ -12,6 +12,7 @@ AVLNode* newAVLNode(char key) {
   node->left   = NULL;
   node->right  = NULL;
   node->key = key;
+  node->words = newList();
   node->height = 0;
   node->bf = 0;
   return node;
@@ -66,8 +67,6 @@ void tree_inorder_walk(AVLNode* root) {
 }
 
 void tree_insert(AVLTree* tree, char key) {
-  if (tree_search(tree->root, key) != NULL) return;
-
   AVLNode* y = NULL;
   AVLNode* x = tree->root;
   AVLNode* z = newAVLNode(key);

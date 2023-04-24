@@ -7,6 +7,7 @@
 
 typedef struct __avl_node {
   char key;
+  List* words;
   int height;
   int bf; // balance factor
   struct __avl_node* parent;
