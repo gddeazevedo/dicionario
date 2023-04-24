@@ -54,7 +54,10 @@ void list_print(List* list) {
 
     printf("[ ");
     while (current != list->head) {
-        printf("%s ", current->word);
+        if (current->next != list->head)
+            printf("%s, ", current->word);
+        else
+            printf("%s ", current->word);
         current = current->next;
     }
     printf("]\n");
