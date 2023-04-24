@@ -117,6 +117,7 @@ void tree_remove(AVLTree* tree, char key) {
     fixup(tree, z->parent);
   } else {
     AVLNode* y = tree_successor(z);
+    AVLNode* y_parent = y->parent;
 
     if (y->parent != z) {
       transplant(tree, y, y->right);
@@ -127,6 +128,12 @@ void tree_remove(AVLTree* tree, char key) {
     transplant(tree, z, y);
     y->left = z->left;
     y->left->parent = y;
+
+    if (y_parent == z) {
+      fixup(tree, y);
+    } else {
+      fixup(tree, y_parent);
+    }
   }
 
   z->left  = NULL;
