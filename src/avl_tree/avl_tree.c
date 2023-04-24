@@ -52,9 +52,12 @@ AVLNode* tree_successor(AVLNode* node) {
 void tree_preorder_walk(AVLNode* root) {
   if (root == NULL) return;
   if (root->parent != NULL)
-    printf("[node: %c, parent: %c, bf: %d]\n", root->key, root->parent->key, root->bf);
+    printf(
+      "[node: %c, parent: %c, bf: %d, height: %d]\n",
+      root->key, root->parent->key, root->bf, root->height + 1
+    );
   else
-    printf("[root: %c, bf: %d]\n", root->key, root->bf);
+    printf("[root: %c, bf: %d, height: %d]\n", root->key, root->bf, root->height + 1);
   tree_preorder_walk(root->left);
   tree_preorder_walk(root->right);
 }
