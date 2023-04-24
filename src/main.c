@@ -16,7 +16,7 @@ void main() {
   tree_insert(t, 'm');
   tree_insert(t, 'n');
 
-  tree_remove(t, 'c');
+  // tree_remove(t, 'c');
   // tree_remove(t, 'g');
 
 
