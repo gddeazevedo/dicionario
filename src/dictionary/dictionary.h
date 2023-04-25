@@ -16,7 +16,7 @@ typedef struct __dict {
 Dict* newDict();
 bool search_word(Dict* dict, char* word);
 void insert_word(Dict* dict, char* word);
-void remove_word(Dict* dict);
+void remove_word(Dict* dict, char* word);
 void show_words_with(Dict* dict, char letter);
 
 #endif

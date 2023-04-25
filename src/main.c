@@ -32,6 +32,14 @@ void main() {
   insert_word(dict, "folha");
   insert_word(dict, "lapis");
 
+  remove_word(dict, "lapis");
+  remove_word(dict, "lupa");
+  remove_word(dict, "pamonha");
+  remove_word(dict, "pasta");
+  remove_word(dict, "helicoptero");
+
+
+
   printf("----Preorder----\n");
   tree_preorder_walk(dict->tree->root);
   printf("\n----In Order----\n");

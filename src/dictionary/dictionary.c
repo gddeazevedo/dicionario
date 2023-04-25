@@ -28,7 +28,25 @@ void insert_word(Dict* dict, char* word) {
   list_insert(node->words, word);
 }
 
-void remove_word(Dict* dict) {}
+void remove_word(Dict* dict, char* word) {
+  char letter = word[0];
+  AVLNode* node = tree_search(dict->tree->root, letter);
+
+  if (node == NULL) {
+    printf("Não há nenhuma palavra com a letra \'%c\' registrada no dicionário\n", letter);
+    return;
+  }
+
+  if (list_remove(node->words, word)) {
+    printf("A palavra \'%s\' foi removida com sucesso!\n", word);
+
+    if (node->words->size == 0) {
+      tree_remove(dict->tree, letter);
+    }
+  } else {
+    printf("%s não está no dicionário\n", word);
+  }
+}
 
 void show_words_with(Dict* dict, char letter) {
   AVLNode* node = tree_search(dict->tree->root, letter);
