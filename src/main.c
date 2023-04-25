@@ -13,6 +13,7 @@ void main() {
   insert_word(dict, "vestido");
   insert_word(dict, "canivete");
   insert_word(dict, "helicoptero");
+  insert_word(dict, "helice");
   insert_word(dict, "material");
   insert_word(dict, "utopia");
   insert_word(dict, "will");
@@ -37,6 +38,8 @@ void main() {
   remove_word(dict, "pamonha");
   remove_word(dict, "pasta");
   remove_word(dict, "helicoptero");
+  remove_word(dict, "helicoptero");
+  remove_word(dict, "tapete");
 
 
 

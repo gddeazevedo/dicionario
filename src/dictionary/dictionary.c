@@ -44,7 +44,7 @@ void remove_word(Dict* dict, char* word) {
       tree_remove(dict->tree, letter);
     }
   } else {
-    printf("%s não está no dicionário\n", word);
+    printf("A palavra \'%s\' não está no dicionário\n", word);
   }
 }
 
