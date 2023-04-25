@@ -20,7 +20,7 @@ ListNode* list_search(List* list, char* word) {
     return current;
 }
 
-void list_insert(List* list, char* word) {
+bool list_insert(List* list, char* word) {
     ListNode* current = list_search(list, word);
     bool word_not_found = (
         current == list->head || strcmp(current->word, word) != 0);
@@ -33,10 +33,13 @@ void list_insert(List* list, char* word) {
         current->prev->next = new_node;
         current->prev = new_node;
         list->size += 1;
+        return true;
     }
+
+    return false;
 }
 
-void list_remove(List* list, char* word) {
+bool list_remove(List* list, char* word) {
     ListNode* current = list_search(list, word);
     bool word_found = (
         current != list->head && strcmp(current->word, word) == 0);
@@ -46,7 +49,10 @@ void list_remove(List* list, char* word) {
         current->next->prev = current->prev;
         free(current);
         list->size -= 1;
+        return true;
     }
+
+    return false;
 }
 
 void list_print(List* list) {
