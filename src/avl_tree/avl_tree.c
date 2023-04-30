@@ -65,8 +65,8 @@ void tree_preorder_walk(AVLNode* root) {
 void tree_inorder_walk(AVLNode* root) {
   if (root == NULL) return;
   tree_inorder_walk(root->left);
-  printf("%c: ", root->key);
-  list_print(root->words);
+  printf("\n- Nó %c nível -\n", root->key);
+  list_print_v2(root->words);
   tree_inorder_walk(root->right);
 }
 

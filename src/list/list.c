@@ -69,6 +69,15 @@ void list_print(List* list) {
     printf("]\n");
 }
 
+void list_print_v2(List* list) {
+  ListNode* current = list->head->next;
+
+  while (current != list->head) {
+      printf("%s\n", current->word);
+      current = current->next;
+  }
+}
+
 void list_clear(List* list) {
   ListNode* current = list->head->next;
   ListNode* aux = NULL;

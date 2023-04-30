@@ -10,13 +10,15 @@
 
 typedef struct __dict {
   AVLTree* tree;
+  unsigned int total_words;
 } Dict;
 
 
 Dict* newDict();
-bool search_word(Dict* dict, char* word);
-void insert_word(Dict* dict, char* word);
-void remove_word(Dict* dict, char* word);
-void show_words_with(Dict* dict, char letter);
+bool dict_search(Dict* dict, char* word);
+void dict_insert(Dict* dict, char* word);
+void dict_remove(Dict* dict, char* word);
+void dict_show_words_with(Dict* dict, char letter);
+void dict_show_all_words(Dict* dict);
 
 #endif

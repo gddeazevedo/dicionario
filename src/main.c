@@ -1,51 +1,68 @@
 #include "./dictionary/dictionary.h"
 
-void main() {
+
+void show_menu();
+
+void show_menu();
+
+int main() {
+  char word[50];
+  unsigned char option;
   Dict* dict = newDict();
-  insert_word(dict, "banana");
-  insert_word(dict, "ameixa");
-  insert_word(dict, "pamonha");
-  insert_word(dict, "alecrim");
-  insert_word(dict, "zumba");
-  insert_word(dict, "bala");
-  insert_word(dict, "aladin");
-  insert_word(dict, "pasta");
-  insert_word(dict, "vestido");
-  insert_word(dict, "canivete");
-  insert_word(dict, "helicoptero");
-  insert_word(dict, "helice");
-  insert_word(dict, "material");
-  insert_word(dict, "utopia");
-  insert_word(dict, "will");
-  insert_word(dict, "xerox");
-  insert_word(dict, "yellow");
-  insert_word(dict, "navio");
-  insert_word(dict, "lupa");
-  insert_word(dict, "otorrinolaringologista");
-  insert_word(dict, "olho");
-  insert_word(dict, "repolho");
-  insert_word(dict, "quasar");
-  insert_word(dict, "sapo");
-  insert_word(dict, "danone");
-  insert_word(dict, "elefante");
-  insert_word(dict, "faca");
-  insert_word(dict, "fazer");
-  insert_word(dict, "folha");
-  insert_word(dict, "lapis");
 
-  remove_word(dict, "lapis");
-  remove_word(dict, "lupa");
-  remove_word(dict, "pamonha");
-  remove_word(dict, "pasta");
-  remove_word(dict, "helicoptero");
-  remove_word(dict, "helicoptero");
-  remove_word(dict, "tapete");
+  while (true) {
+    scanf("%s", word);
+    if (strcmp(word, "0") == 0) break;
+    dict_insert(dict, word);
+  }
 
+  printf("Todas os dados foram carregados com sucesso!!\n");
+  printf("Total de %d palavras inseridas no dicionário!!\n", dict->total_words);
 
+  while (true) {
+    show_menu();
 
-  printf("----Preorder----\n");
-  tree_preorder_walk(dict->tree->root);
-  printf("\n----In Order----\n");
-  tree_inorder_walk(dict->tree->root);
-  printf("\nRoot: %c\nRoot height: %d\n", dict->tree->root->key, dict->tree->root->height);
+    scanf("%d", &option);
+    printf("%d\n", option);
+
+    if (option == 6) {
+        printf("Programa Encerrado!!\n");
+        break;
+    };
+
+    switch (option) {
+      case 1:
+        printf("Informe a palavra a ser Pesquisada:\n\n");
+        scanf("%s", word);
+        printf("%s\n", word);
+        if (!dict_search(dict, word)) {
+          printf("Palavra Inexistente\n");
+        }
+        break;
+      case 2:
+        // inserção
+        break;
+      case 4:
+        // impressao de um nó
+        break;
+      case 5:
+        printf("Imprimindo Árvore...\n");
+        dict_show_all_words(dict);
+        break;
+      default:
+        break;
+    }
+  }
+
+  return 0;
+}
+
+void show_menu() {
+  printf("\n*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***\n\n");
+  printf("1. Busca\n");
+  printf("2. Inserção\n");
+  printf("3. Remoção\n");
+  printf("4. Impressão de um nó\n");
+  printf("5. Impressão da árvore\n");
+  printf("6. Encerrar\n\n");
 }

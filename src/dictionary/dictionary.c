@@ -6,7 +6,7 @@ Dict* newDict() {
   return d;
 }
 
-bool search_word(Dict* dict, char* word) {
+bool dict_search(Dict* dict, char* word) {
   char letter = word[0];
   AVLNode* node = tree_search(dict->tree->root, letter);
 
@@ -16,7 +16,7 @@ bool search_word(Dict* dict, char* word) {
   return true;
 }
 
-void insert_word(Dict* dict, char* word) {
+void dict_insert(Dict* dict, char* word) {
   char letter = word[0];
   AVLNode* node = tree_search(dict->tree->root, letter);
 
@@ -26,9 +26,10 @@ void insert_word(Dict* dict, char* word) {
   }
 
   list_insert(node->words, word);
+  dict->total_words += 1;
 }
 
-void remove_word(Dict* dict, char* word) {
+void dict_remove(Dict* dict, char* word) {
   char letter = word[0];
   AVLNode* node = tree_search(dict->tree->root, letter);
 
@@ -43,12 +44,14 @@ void remove_word(Dict* dict, char* word) {
     if (node->words->size == 0) {
       tree_remove(dict->tree, letter);
     }
+
+    dict->total_words -= 1;
   } else {
     printf("A palavra \'%s\' não está no dicionário\n", word);
   }
 }
 
-void show_words_with(Dict* dict, char letter) {
+void dict_show_words_with(Dict* dict, char letter) {
   AVLNode* node = tree_search(dict->tree->root, letter);
 
   if (node != NULL) {
@@ -57,4 +60,8 @@ void show_words_with(Dict* dict, char letter) {
   } else {
     printf("No words with letter \"%c\"\n", letter);
   }
+}
+
+void dict_show_all_words(Dict* dict) {
+  tree_inorder_walk(dict->tree->root);
 }
