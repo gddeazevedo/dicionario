@@ -141,6 +141,8 @@ void tree_remove(AVLTree* tree, char key) {
 
   z->left  = NULL;
   z->right = NULL;
+  delete_list(z->words);
+  free(z->words);
   free(z);
 }
 
