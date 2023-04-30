@@ -23,5 +23,6 @@ bool list_insert(List* list, char* word);
 bool list_remove(List* list, char* word);
 void list_print(List* list);
 void list_clear(List* list);
+void delete_list(List* list);
 
 #endif

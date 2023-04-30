@@ -82,3 +82,9 @@ void list_clear(List* list) {
   list->head->next = list->head;
   list->head->prev = list->head;
 }
+
+void delete_list(List* list) {
+  list_clear(list);
+  free(list->head);
+  list->head = NULL;
+}
