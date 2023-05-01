@@ -23,9 +23,9 @@ int main() {
     printf("%d\n", option);
 
     if (option == 6) {
-        printf("Programa Encerrado!!\n");
-        break;
-    };
+      printf("Programa Encerrado!!\n");
+      break;
+    }
 
     switch (option) {
       case 1:
