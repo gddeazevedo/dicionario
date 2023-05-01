@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdbool.h>
 #include "../avl_tree/avl_tree.h"
 
 
@@ -15,7 +14,7 @@ typedef struct __dict {
 
 
 Dict* newDict();
-bool dict_search(Dict* dict, char* word);
+void dict_search(Dict* dict, char* word);
 void dict_insert(Dict* dict, char* word);
 void dict_remove(Dict* dict, char* word);
 void dict_show_words_with(Dict* dict, char letter);
