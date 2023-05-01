@@ -65,7 +65,14 @@ void tree_preorder_walk(AVLNode* root) {
 void tree_inorder_walk(AVLNode* root) {
   if (root == NULL) return;
   tree_inorder_walk(root->left);
-  printf("\n- Nó %c nível -\n", root->key);
+
+  if (root->parent == NULL) {
+    printf("\n- Nó %c nível 1 -\n", root->key);
+  } else {
+    int level = root->parent->height - root->height + 1;
+    printf("\n- Nó %c nível %d -\n", root->key, level);
+  }
+
   list_print_v2(root->words);
   tree_inorder_walk(root->right);
 }
