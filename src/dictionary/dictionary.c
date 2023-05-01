@@ -6,14 +6,27 @@ Dict* newDict() {
   return d;
 }
 
-bool dict_search(Dict* dict, char* word) {
+void dict_search(Dict* dict, char* word) {
   char letter = word[0];
   AVLNode* node = tree_search(dict->tree->root, letter);
 
-  if (node == NULL) return false;
-  if (list_search(node->words, word) == node->words->head) return false;
+  if (node == NULL) {
+    printf("Palavra Inexistente\n");
+    return;
+  };
 
-  return true;
+  ListNode* list_node = list_search(node->words, word);
+
+  if (list_node == node->words->head || strcmp(word, list_node->word) != 0) {
+    printf("Palavra Inexistente\n");
+    return;
+  }
+
+  int level = node->parent == NULL ? 1 : (
+    node->parent->height - node->height + 1
+  );
+
+  printf("A Palavra %s foi encontrada no NÓ \'%c\' nível %d\n", word, node->key, level);
 }
 
 void dict_insert(Dict* dict, char* word) {

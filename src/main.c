@@ -1,8 +1,5 @@
 #include "./dictionary/dictionary.h"
 
-
-void show_menu();
-
 void show_menu();
 
 int main() {
@@ -17,7 +14,7 @@ int main() {
   }
 
   printf("Todas os dados foram carregados com sucesso!!\n");
-  printf("Total de %d palavras inseridas no dicionário!!\n", dict->total_words);
+  printf("Total de %d palavras inseridas no dicionário\n", dict->total_words);
 
   while (true) {
     show_menu();
@@ -35,12 +32,13 @@ int main() {
         printf("Informe a palavra a ser Pesquisada:\n\n");
         scanf("%s", word);
         printf("%s\n", word);
-        if (!dict_search(dict, word)) {
-          printf("Palavra Inexistente\n");
-        }
+        dict_search(dict, word);
         break;
       case 2:
         // inserção
+        break;
+      case 3:
+        // remoção
         break;
       case 4:
         // impressao de um nó
