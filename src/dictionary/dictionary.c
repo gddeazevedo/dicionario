@@ -18,13 +18,11 @@ void dict_search(Dict* dict, char* word) {
   ListNode* list_node = list_search(node->words, word);
 
   if (list_node == node->words->head || strcmp(word, list_node->word) != 0) {
-    printf("Palavra Inexistente\n");
+    printf("Palavra Inexistente!\n");
     return;
   }
 
-  int level = node->parent == NULL ? 1 : (
-    node->parent->height - node->height + 1
-  );
+  int level = get_avlnode_level(node);
 
   printf("A Palavra %s foi encontrada no NÓ \'%c\' nível %d\n", word, node->key, level);
 }

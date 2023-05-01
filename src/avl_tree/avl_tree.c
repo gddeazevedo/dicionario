@@ -51,13 +51,19 @@ AVLNode* tree_successor(AVLNode* node) {
 
 void tree_preorder_walk(AVLNode* root) {
   if (root == NULL) return;
+
+  int level = get_avlnode_level(root);
+
   if (root->parent != NULL)
     printf(
-      "[node: %c, parent: %c, bf: %d, height: %d]\n",
-      root->key, root->parent->key, root->bf, root->height + 1
+      "[node: %c, parent: %c, bf: %d, height: %d, level: %d]\n",
+      root->key, root->parent->key, root->bf, root->height + 1, level
     );
   else
-    printf("[root: %c, bf: %d, height: %d]\n", root->key, root->bf, root->height + 1);
+    printf(
+      "[root: %c, bf: %d, height: %d, level: %d]\n",
+      root->key, root->bf, root->height + 1, level
+    );
   tree_preorder_walk(root->left);
   tree_preorder_walk(root->right);
 }
@@ -65,14 +71,8 @@ void tree_preorder_walk(AVLNode* root) {
 void tree_inorder_walk(AVLNode* root) {
   if (root == NULL) return;
   tree_inorder_walk(root->left);
-
-  if (root->parent == NULL) {
-    printf("\n- Nó %c nível 1 -\n", root->key);
-  } else {
-    int level = root->parent->height - root->height + 1;
-    printf("\n- Nó %c nível %d -\n", root->key, level);
-  }
-
+  int level = get_avlnode_level(root);
+  printf("\n- Nó %c nível %d -\n", root->key, level);
   list_print_v2(root->words);
   tree_inorder_walk(root->right);
 }
@@ -238,4 +238,15 @@ int max(int x, int y) {
 int get_avlnode_height(AVLNode* node) {
   if (node == NULL) return -1;
   return node->height;
+}
+
+int get_avlnode_level(AVLNode* node) {
+  int level = 0;
+
+  while (node != NULL) {
+    level++;
+    node = node->parent;
+  }
+
+  return level;
 }

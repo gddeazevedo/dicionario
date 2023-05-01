@@ -38,5 +38,6 @@ void fixup(AVLTree* tree, AVLNode* node);
 
 int max(int x, int y);
 int get_avlnode_height(AVLNode* node);
+int get_avlnode_level(AVLNode* node);
 
 #endif
