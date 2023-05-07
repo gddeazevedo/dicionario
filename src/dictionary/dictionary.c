@@ -11,7 +11,7 @@ void dict_search(Dict* dict, char* word) {
   AVLNode* node = tree_search(dict->tree->root, letter);
 
   if (node == NULL) {
-    printf("Palavra Inexistente\n");
+    printf("Palavra Inexistente!\n");
     return;
   };
 
@@ -36,8 +36,7 @@ void dict_insert(Dict* dict, char* word) {
     node = tree_search(dict->tree->root, letter);
   }
 
-  list_insert(node->words, word);
-  dict->total_words += 1;
+  if (list_insert(node->words, word)) dict->total_words += 1;
 }
 
 void dict_remove(Dict* dict, char* word) {
