@@ -1,15 +1,20 @@
 #include "./dictionary/dictionary.h"
 
 void show_menu();
+void select_option(int option);
+
+char word[50];
+Dict* dict;
+
 
 int main() {
-  char word[50];
+  dict = newDict();
   unsigned char option;
-  Dict* dict = newDict();
 
   while (true) {
     scanf("%s", word);
     if (strcmp(word, "0") == 0) break;
+    if (strcmp(word, "2") == 0) continue;
     dict_insert(dict, word);
   }
 
@@ -27,29 +32,7 @@ int main() {
       break;
     }
 
-    switch (option) {
-      case 1:
-        printf("Informe a palavra a ser Pesquisada:\n\n");
-        scanf("%s", word);
-        printf("%s\n", word);
-        dict_search(dict, word);
-        break;
-      case 2:
-        // inserção
-        break;
-      case 3:
-        // remoção
-        break;
-      case 4:
-        // impressao de um nó
-        break;
-      case 5:
-        printf("Imprimindo Árvore...\n");
-        dict_show_all_words(dict);
-        break;
-      default:
-        break;
-    }
+    select_option(option);
   }
 
   return 0;
@@ -63,4 +46,30 @@ void show_menu() {
   printf("4. Impressão de um nó\n");
   printf("5. Impressão da árvore\n");
   printf("6. Encerrar\n\n");
+}
+
+void select_option(int option) {
+  switch (option) {
+    case 1:
+      printf("Informe a palavra a ser Pesquisada:\n\n");
+      scanf("%s", word);
+      printf("%s\n", word);
+      dict_search(dict, word);
+      break;
+    case 2:
+      printf("INSERÇÂO\n");
+      break;
+    case 3:
+      // remoção
+      break;
+    case 4:
+      dict_show_words_with(dict, word[0]);
+      break;
+    case 5:
+      printf("Imprimindo Árvore...\n");
+      dict_show_all_words(dict);
+      break;
+    default:
+      break;
+  }
 }
