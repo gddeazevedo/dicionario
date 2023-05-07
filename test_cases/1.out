@@ -36,3 +36,15 @@ CABALISTICO
 CABANA
 CABARE
 CABECA
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+6
+Programa Encerrado!!
