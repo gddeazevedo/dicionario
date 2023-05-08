@@ -34,6 +34,14 @@ AVLNode* tree_minimum(AVLNode* root) {
   return root;
 }
 
+AVLNode* tree_maximum(AVLNode* root) {
+  while (root->right != NULL) {
+    root = root->right;
+  }
+
+  return root;
+}
+
 AVLNode* tree_successor(AVLNode* node) {
   if (node->right != NULL) {
     return tree_minimum(node->right);
@@ -42,6 +50,21 @@ AVLNode* tree_successor(AVLNode* node) {
   AVLNode* aux = node->parent;
 
   while (aux != NULL && node == aux->right) {
+    node = aux;
+    aux = aux->parent;
+  }
+
+  return aux;
+}
+
+AVLNode* tree_predecessor(AVLNode* node) {
+  if (node->left != NULL) {
+    return tree_maximum(node->left);
+  }
+
+  AVLNode* aux = node->parent;
+
+  while (aux != NULL && node == aux->left) {
     node = aux;
     aux = aux->parent;
   }
@@ -126,18 +149,18 @@ void tree_remove(AVLTree* tree, char key) {
     transplant(tree, z, z->left);
     fixup(tree, z->parent);
   } else {
-    AVLNode* y = tree_successor(z);
+    AVLNode* y = tree_predecessor(z);
     AVLNode* y_parent = y->parent;
 
     if (y->parent != z) {
-      transplant(tree, y, y->right);
-      y->right = z->right;
-      y->right->parent = y;
+      transplant(tree, y, y->left);
+      y->left = z->left;
+      y->left->parent = y;
     }
 
     transplant(tree, z, y);
-    y->left = z->left;
-    y->left->parent = y;
+    y->right = z->right;
+    y->right->parent = y;
 
     if (y_parent == z) {
       fixup(tree, y);

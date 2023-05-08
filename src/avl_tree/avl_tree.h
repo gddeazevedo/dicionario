@@ -23,7 +23,9 @@ AVLTree* newAVLTree();
 AVLNode* newAVLNode(char key);
 AVLNode* tree_search(AVLNode* root, char key);
 AVLNode* tree_minimum(AVLNode* root);
+AVLNode* tree_maximum(AVLNode* root);
 AVLNode* tree_successor(AVLNode* node);
+AVLNode* tree_predecessor(AVLNode* node);
 
 void tree_preorder_walk(AVLNode* root);
 void tree_inorder_walk(AVLNode* root);
