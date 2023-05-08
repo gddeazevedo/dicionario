@@ -13,7 +13,7 @@ void dict_search(Dict* dict, char* word) {
   if (node == NULL) {
     printf("Palavra Inexistente!\n");
     return;
-  };
+  }
 
   ListNode* list_node = list_search(node->words, word);
 
