@@ -1,0 +1,227 @@
+Todos os dados foram carregados com sucesso!!
+Total de 44 palavras inseridas no dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+J
+
+A(s) Palavra(s) contida(s) no NÓ 'J' nível 3 são:
+
+JACA
+JANTA
+JANTAR
+JANTARADA
+JAPAO
+JAPONA
+JAPONES
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra que deseja Excluir:
+
+JANTARADA
+
+A palavra 'JANTARADA' foi Excluída com sucesso do NÓ 'J' nível 3
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+J
+
+A(s) Palavra(s) contida(s) no NÓ 'J' nível 3 são:
+
+JACA
+JANTA
+JANTAR
+JAPAO
+JAPONA
+JAPONES
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+E
+
+O NÓ E não se encontra na AVL
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+
+Informe a palavra que deseja Excluir:   
+
+JAPONESA
+A Palavra 'JAPONESA' não consta no Dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+S
+
+A(s) Palavra(s) contida(s) no NÓ 'S' nível 4 são:
+
+SEDOSO
+SEDUCAO
+SEDUTOR
+SEDUZIR
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra que deseja Excluir:
+
+SEDOSO
+
+A palavra 'SEDOSO' foi Excluída com sucesso do NÓ 'S' nível 4
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+S
+
+A(s) Palavra(s) contida(s) no NÓ 'S' nível 4 são:
+
+SEDUCAO
+SEDUTOR
+SEDUZIR
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra que deseja Excluir:
+
+SEDOSO
+A Palavra 'SEDOSO' não consta no Dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+2
+
+Total de 11 palavras inseridas no dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+1
+Informe a palavra a ser Pesquisada:     
+
+DADO
+A Palavra DADO foi encontrada no NÓ 'D' nível 4
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+D
+
+A(s) Palavra(s) contida(s) no NÓ 'D' nível 4 são:
+
+DADO
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+6
+Programa Encerrado!!
