@@ -2,6 +2,7 @@
 
 Dict* newDict() {
   Dict* d = (Dict*) malloc(sizeof(Dict));
+  d->total_words = 0;
   d->tree = newAVLTree();
   return d;
 }
