@@ -2,7 +2,6 @@
 
 Dict* newDict() {
   Dict* d = (Dict*) malloc(sizeof(Dict));
-  d->total_words = 0;
   d->tree = newAVLTree();
   return d;
 }
@@ -37,7 +36,7 @@ void dict_insert(Dict* dict, char* word) {
     node = tree_search(dict->tree->root, letter);
   }
 
-  if (list_insert(node->words, word)) dict->total_words += 1;
+  list_insert(node->words, word);
 }
 
 void dict_remove(Dict* dict, char* word) {
@@ -45,20 +44,21 @@ void dict_remove(Dict* dict, char* word) {
   AVLNode* node = tree_search(dict->tree->root, letter);
 
   if (node == NULL) {
-    printf("Não há nenhuma palavra com a letra \'%c\' registrada no dicionário\n", letter);
+    printf("A Palavra \'%s\' não consta no Dicionário\n", word);
     return;
   }
 
   if (list_remove(node->words, word)) {
-    printf("A palavra \'%s\' foi removida com sucesso!\n", word);
+    printf(
+      "A palavra \'%s\' foi Excluída com sucesso do NÓ \'%c\' nível %d\n",
+      word, node->key, get_avlnode_level(node)  
+    );
 
     if (node->words->size == 0) {
       tree_remove(dict->tree, letter);
     }
-
-    dict->total_words -= 1;
   } else {
-    printf("A palavra \'%s\' não está no dicionário\n", word);
+    printf("A Palavra \'%s\' não consta no Dicionário\n", word);
   }
 }
 
@@ -66,10 +66,13 @@ void dict_show_words_with(Dict* dict, char letter) {
   AVLNode* node = tree_search(dict->tree->root, letter);
 
   if (node != NULL) {
-    printf("%c: ", letter);
-    list_print(node->words);
+    printf(
+      "\nA(s) Palavra(s) contida(s) no NÓ \'%c\' nível %d são:\n\n",
+      node->key, get_avlnode_level(node)
+    );
+    list_print_v2(node->words);
   } else {
-    printf("No words with letter \"%c\"\n", letter);
+    printf("\nO NÓ %c não se encontra na AVL\n", letter);
   }
 }
 

@@ -9,7 +9,6 @@
 
 typedef struct __dict {
   AVLTree* tree;
-  unsigned int total_words;
 } Dict;
 
 
