@@ -1,69 +1,43 @@
 #include "./dictionary/dictionary.h"
 
+#define SEARCH_WORD 1
+#define INSERT_WORD 2
+#define DELETE_WORD 3
+#define SHOW_NODE   4
+#define SHOW_TREE   5
+#define EXIT        6
+
 void show_menu();
 void select_option(int option);
 
 char word[50];
 Dict* dict;
 
+int main() {
+  dict = newDict();
+  unsigned char option;
 
-void main() {
-  AVLTree* tree = newAVLTree();
-  tree_insert(tree, 'a');
-  tree_insert(tree, 'b');
-  tree_insert(tree, 'c');
-  tree_insert(tree, 'e');
-  tree_insert(tree, 'd');
-  tree_insert(tree, 'f');
-  tree_insert(tree, 'g');
-  tree_insert(tree, 'h');
-  tree_insert(tree, 'i');
-  tree_insert(tree, 'j');
-  tree_insert(tree, 'k');
-  tree_insert(tree, 'm');
+  scanf("%d", &option);
 
-  tree_remove(tree, 'g');
-  tree_remove(tree, 'h');
-  tree_remove(tree, 'b');
-  tree_remove(tree, 'f');
-  tree_remove(tree, 'j');
-  tree_remove(tree, 'e');
+  printf("Todas os dados foram carregados com sucesso!!");
+  select_option(option);
+  
+  while (true) {
+    show_menu();
 
+    scanf("%d", &option);
+    printf("%d\n", option);
 
+    if (option == 6) {
+      printf("Programa Encerrado!!\n");
+      exit(0);
+    }
 
-  tree_preorder_walk(tree->root);
+    select_option(option);
+  }
+
+  return 0;
 }
-
-// int main() {
-//   dict = newDict();
-//   unsigned char option;
-
-//   while (true) {
-//     scanf("%s", word);
-//     if (strcmp(word, "0") == 0) break;
-//     if (strcmp(word, "2") == 0) continue;
-//     dict_insert(dict, word);
-//   }
-
-//   printf("Todas os dados foram carregados com sucesso!!\n");
-//   printf("Total de %d palavras inseridas no dicionário\n", dict->total_words);
-
-//   while (true) {
-//     show_menu();
-
-//     scanf("%d", &option);
-//     printf("%d\n", option);
-
-//     if (option == 6) {
-//       printf("Programa Encerrado!!\n");
-//       break;
-//     }
-
-//     select_option(option);
-//   }
-
-//   return 0;
-// }
 
 void show_menu() {
   printf("\n*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***\n\n");
@@ -76,27 +50,42 @@ void show_menu() {
 }
 
 void select_option(int option) {
+  int total_words = 0;
+
   switch (option) {
-    case 1:
+    case SEARCH_WORD:
       printf("Informe a palavra a ser Pesquisada:\n\n");
       scanf("%s", word);
       printf("%s\n", word);
       dict_search(dict, word);
       break;
-    case 2:
-      printf("INSERÇÂO\n");
+    case INSERT_WORD:
+      while (true) {
+        scanf("%s", word);
+        if (strcmp(word, "0") == 0) break;
+        total_words += 1;
+        dict_insert(dict, word);
+      }
+      printf("\nTotal de %d palavras inseridas no dicionário\n", total_words);
       break;
-    case 3:
-      // remoção
+    case DELETE_WORD:
+      printf("Informe a palavra que deseja Excluir:\n\n");
+      scanf("%s", word);
+      printf("%s\n\n", word);
+      dict_remove(dict, word);
       break;
-    case 4:
+    case SHOW_NODE:
+      char letter;
+      printf("Informe o nó que deseja Imprimir:\n\n");
+      scanf("%s", word);
+      printf("%c\n", word[0]);
       dict_show_words_with(dict, word[0]);
       break;
-    case 5:
+    case SHOW_TREE:
       printf("Imprimindo Árvore...\n");
       dict_show_all_words(dict);
       break;
     default:
-      break;
+      exit(0);
   }
 }
