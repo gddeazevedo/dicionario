@@ -610,7 +610,6 @@ void select_option(int option) {
       dict_remove(dict, word);
       break;
     case SHOW_NODE:
-      char letter;
       printf("Informe o nó que deseja Imprimir:\n\n");
       scanf("%s", word);
       printf("%c\n", word[0]);
