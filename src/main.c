@@ -20,25 +20,9 @@ int main() {
 
   clock_t begin = clock();
 
-
   scanf("%d", &option);
 
-  printf("Todas os dados foram carregados com sucesso!!");
   select_option(option);
-
-  while (true) {
-    show_menu();
-
-    scanf("%d", &option);
-    printf("%d\n", option);
-
-    if (option == 6) {
-      printf("Programa Encerrado!!\n");
-      break;
-    }
-
-    select_option(option);
-  }
 
   clock_t end = clock();
   double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
