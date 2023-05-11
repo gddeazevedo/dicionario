@@ -1,3 +1,6 @@
-run.out
+*.out
 *.txt
+!test_cases/*.out
+!results/*.txt
 .vscode
+env
