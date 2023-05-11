@@ -14,27 +14,67 @@ char word[50];
 Dict* dict;
 
 int main() {
-  dict = newDict();
-  unsigned char option;
+  AVLTree* tree = newAVLTree();
+  char letras[] = {
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'f',
+    'g',
+    'h',
+    'i',
+    'j',
+    'l',
+    'm',
+    'n',
+    'o',
+    'p',
+    'q',
+    'r',
+    's',
+    't',
+    'u',
+    'v',
+    'x',
+    'z'
+  };
 
-  scanf("%d", &option);
-
-  printf("Todas os dados foram carregados com sucesso!!");
-  select_option(option);
-  
-  while (true) {
-    show_menu();
-
-    scanf("%d", &option);
-    printf("%d\n", option);
-
-    if (option == 6) {
-      printf("Programa Encerrado!!\n");
-      exit(0);
-    }
-
-    select_option(option);
+  for (int i = 0; i < 24; i++) {
+    tree_insert(tree, letras[i]);
   }
+
+  tree_remove(tree, 'q');
+  tree_remove(tree, 'u');
+  tree_remove(tree, 'h');
+
+
+  tree_preorder_walk(tree->root);
+
+
+
+  // dict = newDict();
+  // unsigned char option;
+
+  // scanf("%d", &option);
+
+  // printf("Todas os dados foram carregados com sucesso!!");
+  // select_option(option);
+  
+  // while (true) {
+  //   show_menu();
+
+  //   scanf("%d", &option);
+  //   printf("%d\n", option);
+
+  //   if (option == 6) {
+  //     printf("Programa Encerrado!!\n");
+  //     exit(0);
+  //   }
+
+  //   select_option(option);
+  // }
 
   return 0;
 }
