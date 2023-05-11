@@ -1,4 +1,5 @@
 #include "./dictionary/dictionary.h"
+#include <time.h>
 
 #define SEARCH_WORD 1
 #define INSERT_WORD 2
@@ -14,67 +15,35 @@ char word[50];
 Dict* dict;
 
 int main() {
-  AVLTree* tree = newAVLTree();
-  char letras[] = {
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-    'g',
-    'h',
-    'i',
-    'j',
-    'l',
-    'm',
-    'n',
-    'o',
-    'p',
-    'q',
-    'r',
-    's',
-    't',
-    'u',
-    'v',
-    'x',
-    'z'
-  };
+  dict = newDict();
+  unsigned char option;
 
-  for (int i = 0; i < 24; i++) {
-    tree_insert(tree, letras[i]);
+  clock_t begin = clock();
+
+
+  scanf("%d", &option);
+
+  printf("Todas os dados foram carregados com sucesso!!");
+  select_option(option);
+
+  while (true) {
+    show_menu();
+
+    scanf("%d", &option);
+    printf("%d\n", option);
+
+    if (option == 6) {
+      printf("Programa Encerrado!!\n");
+      break;
+    }
+
+    select_option(option);
   }
 
-  tree_remove(tree, 'q');
-  tree_remove(tree, 'u');
-  tree_remove(tree, 'h');
+  clock_t end = clock();
+  double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
 
-
-  tree_preorder_walk(tree->root);
-
-
-
-  // dict = newDict();
-  // unsigned char option;
-
-  // scanf("%d", &option);
-
-  // printf("Todas os dados foram carregados com sucesso!!");
-  // select_option(option);
-  
-  // while (true) {
-  //   show_menu();
-
-  //   scanf("%d", &option);
-  //   printf("%d\n", option);
-
-  //   if (option == 6) {
-  //     printf("Programa Encerrado!!\n");
-  //     exit(0);
-  //   }
-
-  //   select_option(option);
-  // }
+  printf("\nEXECUTION TIME: %f\n", time_spent);
 
   return 0;
 }
