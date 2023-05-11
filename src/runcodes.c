@@ -80,14 +80,14 @@ typedef struct __dict {
 
 Dict* newDict();
 void dict_search(Dict* dict, char* word);
-void dict_insert(Dict* dict, char* word);
+void dict_insert(Dict* dict, char* word, int first_time);
 void dict_remove(Dict* dict, char* word);
 void dict_show_words_with(Dict* dict, char letter);
 void dict_show_all_words(Dict* dict);
 
 // ######### IO HELPERS #########
 void show_menu();
-void select_option(int option);
+void select_option(int option, int time);
 
 char word[50];
 Dict* dict;
@@ -99,7 +99,7 @@ int main() {
   scanf("%d", &option);
 
   printf("Todos os dados foram carregados com sucesso!!");
-  select_option(option);
+  select_option(option, 1);
   
   while (true) {
     show_menu();
@@ -112,7 +112,7 @@ int main() {
       exit(0);
     }
 
-    select_option(option);
+    select_option(option, 0);
   }
 
   return 0;
@@ -522,7 +522,7 @@ void dict_search(Dict* dict, char* word) {
   printf("A Palavra \'%s\' foi encontrada no NÓ \'%c\' nível %d\n", word, node->key, level);
 }
 
-void dict_insert(Dict* dict, char* word) {
+void dict_insert(Dict* dict, char* word, int firts_time) {
   char letter = word[0];
   AVLNode* node = tree_search(dict->tree->root, letter);
 
@@ -532,6 +532,11 @@ void dict_insert(Dict* dict, char* word) {
   }
 
   if (list_insert(node->words, word)) dict->total_words += 1;
+  else if (!firts_time)
+    printf(
+      "A Palavra \'%s\' já consta no dicionário NÓ '%c' nível %d\n",
+      word, node->key, get_avlnode_level(node)
+    );
 }
 
 void dict_remove(Dict* dict, char* word) {
@@ -586,7 +591,7 @@ void show_menu() {
   printf("6. Encerrar\n\n");
 }
 
-void select_option(int option) {
+void select_option(int option, int time) {
   dict->total_words = 0;
 
   switch (option) {
@@ -600,14 +605,15 @@ void select_option(int option) {
       while (true) {
         scanf("%s", word);
         if (strcmp(word, "0") == 0) break;
-        dict_insert(dict, word);
+        dict_insert(dict, word, time);
       }
-      printf("\nTotal de %d palavras inseridas no dicionário\n", dict->total_words);
+      if (dict->total_words != 0)
+        printf("\nTotal de %d palavras inseridas no dicionário\n", dict->total_words);
       break;
     case DELETE_WORD:
-      printf("Informe a palavra que deseja Excluir:\n\n");
+      printf("Informe a palavra a ser Excluída:\n\n");
       scanf("%s", word);
-      printf("%s\n\n", word);
+      printf("%s\n", word);
       dict_remove(dict, word);
       break;
     case SHOW_NODE:
