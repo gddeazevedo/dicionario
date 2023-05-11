@@ -3,6 +3,7 @@
 Dict* newDict() {
   Dict* d = (Dict*) malloc(sizeof(Dict));
   d->tree = newAVLTree();
+  d->total_words = 0;
   return d;
 }
 
@@ -36,7 +37,7 @@ void dict_insert(Dict* dict, char* word) {
     node = tree_search(dict->tree->root, letter);
   }
 
-  list_insert(node->words, word);
+  if (list_insert(node->words, word)) dict->total_words += 1;
 }
 
 void dict_remove(Dict* dict, char* word) {

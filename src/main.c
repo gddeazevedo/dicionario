@@ -50,7 +50,7 @@ void show_menu() {
 }
 
 void select_option(int option) {
-  int total_words = 0;
+  dict->total_words = 0;
 
   switch (option) {
     case SEARCH_WORD:
@@ -63,10 +63,9 @@ void select_option(int option) {
       while (true) {
         scanf("%s", word);
         if (strcmp(word, "0") == 0) break;
-        total_words += 1;
         dict_insert(dict, word);
       }
-      printf("\nTotal de %d palavras inseridas no dicionário\n", total_words);
+      printf("\nTotal de %d palavras inseridas no dicionário\n", dict->total_words);
       break;
     case DELETE_WORD:
       printf("Informe a palavra que deseja Excluir:\n\n");
