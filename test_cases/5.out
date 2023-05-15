@@ -1,5 +1,5 @@
 Todos os dados foram carregados com sucesso!!
-Total de 44 palavras inseridas no dicionário
+Total de 98 palavras inseridas no dicionário
 
 *** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
 
@@ -13,17 +13,34 @@ Total de 44 palavras inseridas no dicionário
 4
 Informe o nó que deseja Imprimir:
 
-J
+L
 
-A(s) Palavra(s) contida(s) no NÓ 'J' nível 3 são:
+A(s) Palavra(s) contida(s) no NÓ 'L' nível 4 são:
 
-JACA
-JANTA
-JANTAR
-JANTARADA
-JAPAO
-JAPONA
-JAPONES
+LEGUMES
+LEGUMINOSAS
+LEGUMINOSO
+LEI
+LEIGO
+LEILAO
+LEILOAR
+LEILOEIRO
+LEIS
+LEISHMANIOSE
+LEITAO
+LEITE
+LEITEIRA
+LEITEIRO
+LEITERIA
+LEITMOTIV
+LEITO
+LEITOA
+LEITOR
+LEITORA
+LEITOSO
+LEITURA
+LELE
+LEMA
 
 *** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
 
@@ -35,34 +52,11 @@ JAPONES
 6. Encerrar
 
 3
-Informe a palavra a ser Excluída: 
+Informe a palavra a ser Excluída:   
 
-JANTARADA
+LEMA
 
-A palavra 'JANTARADA' foi Excluída com sucesso do NÓ 'J' nível 3
-
-*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
-
-1. Pesquisa
-2. Inserção
-3. Remoção
-4. Impressão de um nó
-5. Impressão da árvore
-6. Encerrar
-
-4
-Informe o nó que deseja Imprimir:
-
-J
-
-A(s) Palavra(s) contida(s) no NÓ 'J' nível 3 são:
-
-JACA
-JANTA
-JANTAR
-JAPAO
-JAPONA
-JAPONES
+A palavra 'LEMA' foi Excluída com sucesso do NÓ 'L' nível 4
 
 *** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
 
@@ -76,9 +70,33 @@ JAPONES
 4
 Informe o nó que deseja Imprimir:
 
-E
+L
 
-O NÓ E não se encontra na AVL
+A(s) Palavra(s) contida(s) no NÓ 'L' nível 4 são:
+
+LEGUMES
+LEGUMINOSAS
+LEGUMINOSO
+LEI
+LEIGO
+LEILAO
+LEILOAR
+LEILOEIRO
+LEIS
+LEISHMANIOSE
+LEITAO
+LEITE
+LEITEIRA
+LEITEIRO
+LEITERIA
+LEITMOTIV
+LEITO
+LEITOA
+LEITOR
+LEITORA
+LEITOSO
+LEITURA
+LELE
 
 *** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
 
@@ -90,10 +108,26 @@ O NÓ E não se encontra na AVL
 6. Encerrar
 
 3
-Informe a palavra a ser Excluída:  
+Informe a palavra a ser Excluída:      
 
-JAPONESA
-A palavra 'JAPONESA' não consta no dicionário
+LITRO
+A palavra 'LITRO' não consta no dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+INUTIL
+
+A palavra 'INUTIL' foi Excluída com sucesso do NÓ 'I' nível 4
 
 *** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
 
@@ -107,50 +141,29 @@ A palavra 'JAPONESA' não consta no dicionário
 4
 Informe o nó que deseja Imprimir:
 
-S
+I
 
-A(s) Palavra(s) contida(s) no NÓ 'S' nível 4 são:
+A(s) Palavra(s) contida(s) no NÓ 'I' nível 4 são:
 
-SEDOSO
-SEDUCAO
-SEDUTOR
-SEDUZIR
-
-*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
-
-1. Pesquisa
-2. Inserção
-3. Remoção
-4. Impressão de um nó
-5. Impressão da árvore
-6. Encerrar
-
-3
-Informe a palavra a ser Excluída: 
-
-SEDOSO
-
-A palavra 'SEDOSO' foi Excluída com sucesso do NÓ 'S' nível 4
-
-*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
-
-1. Pesquisa
-2. Inserção
-3. Remoção
-4. Impressão de um nó
-5. Impressão da árvore
-6. Encerrar
-
-4
-Informe o nó que deseja Imprimir:
-
-S
-
-A(s) Palavra(s) contida(s) no NÓ 'S' nível 4 são:
-
-SEDUCAO
-SEDUTOR
-SEDUZIR
+INUMANO
+INUMERAVEL
+INUMERO
+INUNDACAO
+INUNDADO
+INUNDAMENTO
+INUNDANTE
+INUNDAR
+INUNDAVEL
+INUSITADO
+INUTILIDADE
+INUTILIZAR
+INUTILIZAVEL
+INVADIR
+INVALIDACAO
+INVALIDADO
+INVALIDAR
+INVALIDEZ
+INVALIDO
 
 *** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
 
@@ -161,11 +174,11 @@ SEDUZIR
 5. Impressão da árvore
 6. Encerrar
 
-3
-Informe a palavra a ser Excluída: 
+1
+Informe a palavra a ser Pesquisada:     
 
-SEDOSO
-A palavra 'SEDOSO' não consta no dicionário
+INUTIL
+Palavra Inexistente!
 
 *** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
 
@@ -178,7 +191,44 @@ A palavra 'SEDOSO' não consta no dicionário
 
 2
 
-Total de 11 palavras inseridas no dicionário
+Total de 1 palavras inseridas no dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+I
+
+A(s) Palavra(s) contida(s) no NÓ 'I' nível 4 são:
+
+INUMANO
+INUMERAVEL
+INUMERO
+INUNDACAO
+INUNDADO
+INUNDAMENTO
+INUNDANTE
+INUNDAR
+INUNDAVEL
+INUSITADO
+INUTIL
+INUTILIDADE
+INUTILIZAR
+INUTILIZAVEL
+INVADIR
+INVALIDACAO
+INVALIDADO
+INVALIDAR
+INVALIDEZ
+INVALIDO
 
 *** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
 
@@ -192,8 +242,21 @@ Total de 11 palavras inseridas no dicionário
 1
 Informe a palavra a ser Pesquisada:
 
-DADO
-A palavra 'DADO' foi encontrada no NÓ 'D' nível 4
+INUTIL
+A palavra 'INUTIL' foi encontrada no NÓ 'I' nível 4
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+2
+
+Total de 1 palavras inseridas no dicionário
 
 *** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
 
@@ -209,9 +272,40 @@ Informe o nó que deseja Imprimir:
 
 D
 
-A(s) Palavra(s) contida(s) no NÓ 'D' nível 4 são:
+A(s) Palavra(s) contida(s) no NÓ 'D' nível 5 são:
 
 DADO
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:  
+
+DADO
+A palavra 'DADO' foi Excluída com sucesso do NÓ 'D' nível 5
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+D
+
+O NÓ D não se encontra na AVL
 
 *** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
 

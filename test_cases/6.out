@@ -1,0 +1,390 @@
+Todos os dados foram carregados com sucesso!!
+Total de 63 palavras inseridas no dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+1
+Informe a palavra a ser Pesquisada:     
+
+CABRA
+Palavra Inexistente!
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+A
+O NÓ A não se encontra na AVL
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+2
+
+Total de 1 palavras inseridas no dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+A
+
+A(s) Palavra(s) contida(s) no NÓ 'A' nível 4 são:
+
+ABACAXI
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+1
+Informe a palavra a ser Pesquisada:     
+
+ABACAXI
+A palavra 'ABACAXI' foi encontrada no NÓ 'A' nível 4
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+JECA
+A palavra 'JECA' foi Excluída com sucesso do NÓ 'J' nível 3
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+J
+
+A(s) Palavra(s) contida(s) no NÓ 'J' nível 3 são:
+
+JECATATU
+JEGUE
+JEITOSO
+JEJUAR
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+1
+Informe a palavra a ser Pesquisada:     
+
+LEITO
+A palavra 'LEITO' foi encontrada no NÓ 'L' nível 4
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+1
+Informe a palavra a ser Pesquisada:     
+
+ZEBRA
+Palavra Inexistente!
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+2
+
+Total de 1 palavras inseridas no dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+Z
+
+A(s) Palavra(s) contida(s) no NÓ 'Z' nível 4 são:
+
+ZEBRA
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+K
+
+A(s) Palavra(s) contida(s) no NÓ 'K' nível 3 são:
+
+KAREN
+KELEN
+KIT-KAT
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+2
+
+Total de 1 palavras inseridas no dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+K
+
+A(s) Palavra(s) contida(s) no NÓ 'K' nível 3 são:
+
+KAKA
+KAREN
+KELEN
+KIT-KAT
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+MACACO
+A palavra 'MACACO' não consta no dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+2
+
+Total de 1 palavras inseridas no dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+N
+
+O NÓ N não se encontra na AVL
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+M
+
+A(s) Palavra(s) contida(s) no NÓ 'M' nível 2 são:
+
+MACA
+MACACO
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:
+
+MACACO
+A palavra 'MACACO' foi Excluída com sucesso do NÓ 'M' nível 2
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:
+
+MACA
+A palavra 'MACA' foi Excluída com sucesso do NÓ 'M' nível 2
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+M
+
+O NÓ M não se encontra na AVL
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+L
+
+A(s) Palavra(s) contida(s) no NÓ 'L' nível 2 são:
+
+LEGUMES
+LEGUMINOSAS
+LEGUMINOSO
+LEI
+LEIGO
+LEILAO
+LEILOAR
+LEILOEIRO
+LEIS
+LEITAO
+LEITE
+LEITEIRA
+LEITEIRO
+LEITERIA
+LEITMOTIV
+LEITO
+LEITOA
+LEITOR
+LEITORA
+LEITOSO
+LEITURA
+LELE
+LEMA
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+6
+Programa Encerrado!!

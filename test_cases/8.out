@@ -1,0 +1,643 @@
+Todos os dados foram carregados com sucesso!!
+Total de 71 palavras inseridas no dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+2
+
+Total de 1 palavras inseridas no dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+1
+Informe a palavra a ser Pesquisada:     
+
+QUEIJO
+A palavra 'QUEIJO' foi encontrada no NÓ 'Q' nível 4
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+LEMA
+A palavra 'LEMA' foi Excluída com sucesso do NÓ 'L' nível 3
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+2
+
+Total de 1 palavras inseridas no dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+1
+Informe a palavra a ser Pesquisada:     
+
+INUTIL
+A palavra 'INUTIL' foi encontrada no NÓ 'I' nível 4
+
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+I
+
+A(s) Palavra(s) contida(s) no NÓ 'I' nível 4 são:
+
+INUMANO
+INUMERAVEL
+INUMERO
+INUNDACAO
+INUNDADO
+INUNDAMENTO
+INUNDANTE
+INUNDAR
+INUNDAVEL
+INUSITADO
+INUTIL
+INUTILIDADE
+INUTILIZAR
+INUTILIZAVEL
+INVADIR
+INVALIDACAO
+INVALIDADO
+INVALIDAR
+INVALIDEZ
+INVALIDO
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+INUTIL
+A palavra 'INUTIL' foi Excluída com sucesso do NÓ 'I' nível 4
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+I
+
+A(s) Palavra(s) contida(s) no NÓ 'I' nível 4 são:
+
+INUMANO
+INUMERAVEL
+INUMERO
+INUNDACAO
+INUNDADO
+INUNDAMENTO
+INUNDANTE
+INUNDAR
+INUNDAVEL
+INUSITADO
+INUTILIDADE
+INUTILIZAR
+INUTILIZAVEL
+INVADIR
+INVALIDACAO
+INVALIDADO
+INVALIDAR
+INVALIDEZ
+INVALIDO
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+1
+Informe a palavra a ser Pesquisada:     
+
+INUTIL
+Palavra Inexistente!
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+2
+
+Total de 1 palavras inseridas no dicionário
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+I
+
+A(s) Palavra(s) contida(s) no NÓ 'I' nível 4 são:
+
+INUMANO
+INUMERAVEL
+INUMERO
+INUNDACAO
+INUNDADO
+INUNDAMENTO
+INUNDANTE
+INUNDAR
+INUNDAVEL
+INUSITADO
+INUTIL
+INUTILIDADE
+INUTILIZAR
+INUTILIZAVEL
+INVADIR
+INVALIDACAO
+INVALIDADO
+INVALIDAR
+INVALIDEZ
+INVALIDO
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+1
+Informe a palavra a ser Pesquisada:     
+
+INUTIL
+A palavra 'INUTIL' foi encontrada no NÓ 'I' nível 4
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+5
+Imprimindo Árvore...
+
+- Nó A nível 3 -
+ABACATEIRO
+ABACAXI
+ABAIXO
+ABAJUR
+ABALAR
+ABALAVEL
+ABALO
+
+- Nó B nível 2 -
+BREVE
+BRISA
+BROTO
+
+- Nó C nível 3 -
+CABALISTICO
+CABANA
+CABARE
+CABECA
+
+- Nó H nível 1 -
+HERNIA
+HEROI
+HEROICO
+HEROINA
+
+- Nó I nível 4 -
+INUMANO
+INUMERAVEL
+INUMERO
+INUNDACAO
+INUNDADO
+INUNDAMENTO
+INUNDANTE
+INUNDAR
+INUNDAVEL
+INUSITADO
+INUTIL
+INUTILIDADE
+INUTILIZAR
+INUTILIZAVEL
+INVADIR
+INVALIDACAO
+INVALIDADO
+INVALIDAR
+INVALIDEZ
+INVALIDO
+
+- Nó L nível 3 -
+LEGUMES
+LEGUMINOSAS
+LEGUMINOSO
+LEI
+LEIGO
+LEILAO
+LEILOAR
+LEILOEIRO
+LEIS
+LEISHMANIOSE
+LEITAO
+LEITE
+LEITEIRA
+LEITEIRO
+LEITERIA
+LEITMOTIV
+LEITO
+LEITOA
+LEITOR
+LEITORA
+LEITOSO
+LEITURA
+LELE
+
+- Nó P nível 2 -
+PESQUEIRO
+PESQUISA
+
+- Nó Q nível 4 -
+QUEIJO
+
+- Nó R nível 3 -
+REI
+REICH
+REIDRATACAO
+
+- Nó S nível 4 -
+SAPATILHA
+SAPATO
+SAPE
+SAPEAR
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+QUEIJO
+A palavra 'QUEIJO' foi Excluída com sucesso do NÓ 'Q' nível 4
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+Q
+O NÓ Q não se encontra na AVL
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+SAPATILHA
+A palavra 'SAPATILHA' foi Excluída com sucesso do NÓ 'S' nível 4
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+SAPATO
+A palavra 'SAPATO' foi Excluída com sucesso do NÓ 'S' nível 4 
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+SAPE
+A palavra 'SAPE' foi Excluída com sucesso do NÓ 'S' nível 4
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+SAPEAR
+A palavra 'SAPEAR' foi Excluída com sucesso do NÓ 'S' nível 4
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+S
+O NÓ S não se encontra na AVL
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+PESQUEIRO
+A palavra 'PESQUEIRO' foi Excluída com sucesso do NÓ 'P' nível 2
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+PESQUISA
+A palavra 'PESQUISA' foi Excluída com sucesso do NÓ 'P' nível 2
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+P
+O NÓ P não se encontra na AVL
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+1
+Informe a palavra a ser Pesquisada:     
+
+LEI
+A palavra 'LEI' foi encontrada no NÓ 'L' nível 2
+
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+HERNIA
+A palavra 'HERNIA' foi Excluída com sucesso do NÓ 'H' nível 1
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+HEROI
+A palavra 'HEROI' foi Excluída com sucesso do NÓ 'H' nível 1
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+HEROICO
+A palavra 'HEROICO' foi Excluída com sucesso do NÓ 'H' nível 1
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+3
+Informe a palavra a ser Excluída:     
+
+HEROINA
+A palavra 'HEROINA' foi Excluída com sucesso do NÓ 'H' nível 1
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+4
+Informe o nó que deseja Imprimir:
+
+H
+O NÓ H não se encontra na AVL 
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+1
+Informe a palavra a ser Pesquisada:     
+
+CABECA
+A palavra 'CABECA' foi encontrada no NÓ 'C' nível 1
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+1
+Informe a palavra a ser Pesquisada:     
+
+LEIGO
+A palavra 'LEIGO' foi encontrada no NÓ 'L' nível 2
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+1
+Informe a palavra a ser Pesquisada:     
+
+REI
+A palavra 'REI' foi encontrada no NÓ 'R' nível 3
+
+*** MENU DE OPÇÕES: ENTRE COM A OPÇÃO DESEJADA ***
+
+1. Pesquisa
+2. Inserção
+3. Remoção
+4. Impressão de um nó
+5. Impressão da árvore
+6. Encerrar
+
+6
+Programa Encerrado!!
